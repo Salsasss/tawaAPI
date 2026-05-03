@@ -4,8 +4,16 @@ from apps.menu.utils import ESTADOS_ORDEN
 
 class Orden(models.Model):
     mesa = models.PositiveIntegerField(
+        null=True,
+        blank=True,
         verbose_name="Número de Mesa",
-        help_text="Mesa que realiza el pedido"
+        help_text="Mesa que realiza el pedido (nulo si es para llevar)"
+    )
+    
+    es_para_llevar = models.BooleanField(
+        default=False,
+        verbose_name="¿Es para llevar?",
+        help_text="Indica si el pedido es para llevar o para comer en el lugar"
     )
     
     total = models.DecimalField(
@@ -33,7 +41,7 @@ class Orden(models.Model):
     class Meta:
         verbose_name = "Orden"
         verbose_name_plural = "Órdenes"
-        ordering = ['-fecha_creacion']
+        ordering = ['-created_at']
 
     def __str__(self):
         return f"Orden {self.id} - Mesa {self.mesa}"

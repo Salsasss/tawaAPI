@@ -30,6 +30,19 @@ class DetalleOrden(models.Model):
         verbose_name="Precio Unitario",
         help_text="Precio al que se vendió para evitar cambios históricos"
     )
+    
+    notas = models.TextField(
+        blank=True,
+        null=True,
+        verbose_name="Notas del cliente",
+        help_text="Ej. Sin cebolla, bien cocido"
+    )
+
+    preparado = models.BooleanField(
+        default=False,
+        verbose_name="¿Preparado?",
+        help_text="Indica si este platillo específico ya fue preparado por cocina"
+    )
 
     class Meta:
         verbose_name = "Detalle de Orden"

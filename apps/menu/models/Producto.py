@@ -1,7 +1,8 @@
 from django.db import models
 from django.core.validators import MinValueValidator
 
-from apps.menu.models import CategoriaProducto
+from apps.menu.models.CategoriaProducto import CategoriaProducto
+from apps.menu.models.Ingrediente import Ingrediente
 
 class Producto(models.Model):
     nombre = models.CharField(
@@ -45,6 +46,14 @@ class Producto(models.Model):
         db_index=True, # Indexado para mostrar solo lo que hay en existencia
         verbose_name="Disponible",
         help_text="Desmarcar si el producto se agotó"
+    )
+    
+    ingredientes = models.ManyToManyField(
+        Ingrediente,
+        blank=True,
+        related_name="productos",
+        verbose_name="Ingredientes",
+        help_text="Ingredientes que conforman o pueden modificarse en el platillo"
     )
     
     class Meta:

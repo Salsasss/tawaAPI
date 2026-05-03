@@ -1,3 +1,4 @@
+from .Ingrediente import Ingrediente
 from .Producto import Producto
 from .CategoriaProducto import CategoriaProducto
 from .Orden import Orden

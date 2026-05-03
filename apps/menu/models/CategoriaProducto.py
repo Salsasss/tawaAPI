@@ -1,5 +1,4 @@
 from django.db import models
-from django.core.validators import MinValueValidator
 
 class CategoriaProducto(models.Model):
     nombre = models.CharField(

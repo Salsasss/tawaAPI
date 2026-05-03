@@ -25,7 +25,7 @@ class Orden(models.Model):
     
     created_at = models.DateTimeField(
         auto_now_add=True,
-        db_index=True, # Útil para ordenar por las más recientes o reportes diarios
+        db_index=True, # index -> Útil para ordenar por las más recientes o reportes diarios
         verbose_name="Fecha de Creación"
     )
     
@@ -33,9 +33,15 @@ class Orden(models.Model):
         max_length=20,
         choices=ESTADOS_ORDEN,
         default='NUEVA',
-        db_index=True, # CRÍTICO: Para que la pantalla del empleado cargue las columnas rápido
+        db_index=True, # index -> Para que la pantalla del empleado cargue las columnas rápido
         verbose_name="Estado de la Orden",
         help_text="Determina en qué columna aparece la orden para el empleado"
+    )
+    
+    para_llevar = models.BooleanField(
+        default=False,
+        verbose_name="Para llevar",
+        help_text="El pedido es para llevar"
     )
 
     class Meta:

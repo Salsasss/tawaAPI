@@ -100,5 +100,4 @@ def run():
 
     print("¡Datos de prueba insertados con éxito!")
 
-if __name__ == '__main__':
-    run()
+run()

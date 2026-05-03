@@ -1,5 +1,6 @@
 from django.db import models
 
+from apps.menu.utils import METODOS_PAGO
 from apps.menu.utils import ESTADOS_ORDEN
 
 class Orden(models.Model):
@@ -15,7 +16,36 @@ class Orden(models.Model):
         verbose_name="¿Es para llevar?",
         help_text="Indica si el pedido es para llevar o para comer en el lugar"
     )
+
+    metodo_pago = models.CharField(
+        max_length=20,
+        choices=METODOS_PAGO,
+        default='EFECTIVO',
+        verbose_name="Método de Pago",
+        help_text="Seleccione el método de pago"
+    )
+
+    propina = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0.00,
+        verbose_name="Propina"
+    ) 
     
+    subtotal = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0.00,
+        verbose_name="Subtotal (Sin IVA)"
+    )
+
+    iva = models.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        default=0.00,
+        verbose_name="IVA (16%)"
+    )
+
     total = models.DecimalField(
         max_digits=10,
         decimal_places=2,
@@ -36,12 +66,6 @@ class Orden(models.Model):
         db_index=True, # index -> Para que la pantalla del empleado cargue las columnas rápido
         verbose_name="Estado de la Orden",
         help_text="Determina en qué columna aparece la orden para el empleado"
-    )
-    
-    para_llevar = models.BooleanField(
-        default=False,
-        verbose_name="Para llevar",
-        help_text="El pedido es para llevar"
     )
 
     class Meta:

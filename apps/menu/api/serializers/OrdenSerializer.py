@@ -10,17 +10,16 @@ class OrdenSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Orden
-        fields = ['id', 'mesa', 'es_para_llevar', 'total', 'created_at', 'estado', 'detalles']
-        read_only_fields = ['total', 'created_at']
+        fields = ['id', 'mesa', 'es_para_llevar', 'metodo_pago', 'subtotal', 'iva', 'propina', 'total', 'created_at', 'estado', 'detalles']
+        read_only_fields = ['subtotal', 'iva', 'total', 'created_at']
 
     def create(self, validated_data):
         detalles_data = validated_data.pop('detalles', [])
+        propina = validated_data.get('propina', 0)
         
-        # El total lo podemos calcular aquí si no se pasa del frontend
-        # o dejarlo en 0 y sumarlo despues de agregar los detalles
         orden = Orden.objects.create(**validated_data)
         
-        total = 0
+        subtotal = 0
         for detalle_data in detalles_data:
             producto = detalle_data['producto']
             cantidad = detalle_data.get('cantidad', 1)
@@ -28,7 +27,7 @@ class OrdenSerializer(serializers.ModelSerializer):
             
             # Tomamos el precio actual del producto
             precio_unitario = producto.precio
-            total += precio_unitario * cantidad
+            subtotal += precio_unitario * cantidad
             
             DetalleOrden.objects.create(
                 orden=orden,
@@ -38,7 +37,13 @@ class OrdenSerializer(serializers.ModelSerializer):
                 notas=notas
             )
             
-        orden.total = total
+        # Calcular impuestos y total final
+        iva = float(subtotal) * 0.16
+        total_final = float(subtotal) + iva + float(propina)
+        
+        orden.subtotal = subtotal
+        orden.iva = iva
+        orden.total = total_final
         orden.save()
         
         return orden

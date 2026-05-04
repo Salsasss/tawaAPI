@@ -16,7 +16,7 @@ Sigue estos pasos para instalar y ejecutar el proyecto en tu entorno local:
 ### 1. Clonar el repositorio
 Si usas Git, clona el repositorio y navega al directorio del proyecto:
 ```bash
-# git clone <tu-repositorio-url>
+git clone <tu-repositorio-url>
 cd tawa
 ```
 
@@ -87,13 +87,21 @@ python manage.py runserver
 ```
 La API estará disponible en `http://127.0.0.1:8000/`.
 
----
+## Documentación de la API (Swagger UI)
+
+El proyecto incluye documentación interactiva y generada automáticamente gracias a `drf-spectacular`. 
+Con el servidor local corriendo, simplemente abre tu navegador y visita:
+
+👉 **[http://127.0.0.1:8000/api/docs/](http://127.0.0.1:8000/api/docs/)**
+
+En esta interfaz podrás visualizar de forma amigable todos los endpoints disponibles, ver qué parámetros requieren, entender la forma de los objetos JSON que debes enviar o recibir, e incluso ejecutar pruebas de cada ruta de la API directamente desde tu navegador.
 
 ## Estructura de la API
 
 Todas las rutas de recursos inician con el prefijo `/api/`.
 
 ### Rutas Públicas (Lectura / Clientes)
+*   `GET /api/ingredientes/` - Lista de ingredientes.
 *   `GET /api/categorias/` - Lista de categorías.
 *   `GET /api/productos/` - Catálogo completo del menú (Soporta filtros: `?categoria=1&is_active=true`).
 *   `POST /api/ordenes/` - Crear una nueva orden con su carrito de detalles y cálculos automáticos de subtotal, IVA y total.

@@ -11,7 +11,7 @@ __pycache__/
 *.css.map
 
 # Variables de Entorno
-*.env
+# *.env -> En teoria no se sube pero ps x
 
 # Dump de la DB
 data*.json

@@ -30,7 +30,17 @@ SECRET_KEY = 'django-insecure-ovy=#m%xjp=69f@w5mfj_9t_sxu)vie(+d60y1qwty**51f5n6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "tawaapi.onrender.com",
+    "https://tawaapi.onrender.com",
+    "https://www.tawaapi.onrender.com",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://tawaapi.onrender.com",
+    "https://www.tawaapi.onrender.com",
+]
+
 
 # Application definition
 

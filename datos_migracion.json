@@ -1,0 +1,599 @@
+[
+{
+    "model": "auth.user",
+    "fields": {
+        "password": "pbkdf2_sha256$1200000$nUoPWXnx72cZKtTQEv4qod$NA2gtZ/8z3OY2geXq60PXKyqENAzWQJl9Rg9MhHyYtM=",
+        "last_login": null,
+        "is_superuser": true,
+        "username": "aaron",
+        "first_name": "",
+        "last_name": "",
+        "email": "aaron@aaron.com",
+        "is_staff": true,
+        "is_active": true,
+        "date_joined": "2026-05-03T20:09:26.840Z",
+        "groups": [],
+        "user_permissions": []
+    }
+},
+{
+    "model": "menu.categoriaproducto",
+    "pk": 1,
+    "fields": {
+        "nombre": "Especialidades del Mar"
+    }
+},
+{
+    "model": "menu.categoriaproducto",
+    "pk": 2,
+    "fields": {
+        "nombre": "Caldos y Sopas"
+    }
+},
+{
+    "model": "menu.categoriaproducto",
+    "pk": 3,
+    "fields": {
+        "nombre": "Bebidas"
+    }
+},
+{
+    "model": "menu.ingrediente",
+    "pk": 1,
+    "fields": {
+        "nombre": "Camarón"
+    }
+},
+{
+    "model": "menu.ingrediente",
+    "pk": 2,
+    "fields": {
+        "nombre": "Pulpo"
+    }
+},
+{
+    "model": "menu.ingrediente",
+    "pk": 3,
+    "fields": {
+        "nombre": "Cebolla"
+    }
+},
+{
+    "model": "menu.ingrediente",
+    "pk": 4,
+    "fields": {
+        "nombre": "Ajo"
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 1,
+    "fields": {
+        "nombre": "Cocteles",
+        "descripcion": "Camarón, caracol, pulpo...",
+        "precio": "70.00",
+        "imagen": "",
+        "categoria": 1,
+        "is_active": true,
+        "ingredientes": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 2,
+    "fields": {
+        "nombre": "Mariscada TAWA",
+        "descripcion": "Pulpos encebollados, camarones...",
+        "precio": "250.00",
+        "imagen": "",
+        "categoria": 1,
+        "is_active": true,
+        "ingredientes": [
+            1,
+            2,
+            3
+        ]
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 3,
+    "fields": {
+        "nombre": "Pulpos a la Gallega",
+        "descripcion": "Delicioso pulpo cocido con pimentón, aceite de oliva y sal.",
+        "precio": "145.00",
+        "imagen": "",
+        "categoria": 1,
+        "is_active": true,
+        "ingredientes": [
+            2
+        ]
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 4,
+    "fields": {
+        "nombre": "Camarones Empanizados",
+        "descripcion": "Crujientes camarones rebosados acompañados de ensalada.",
+        "precio": "180.00",
+        "imagen": "",
+        "categoria": 1,
+        "is_active": true,
+        "ingredientes": [
+            1
+        ]
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 5,
+    "fields": {
+        "nombre": "Tawinas",
+        "descripcion": "Pulpa de cangrejo con aceite, limón, vino, picante, caldo.",
+        "precio": "145.00",
+        "imagen": "",
+        "categoria": 1,
+        "is_active": true,
+        "ingredientes": []
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 6,
+    "fields": {
+        "nombre": "Mojarras",
+        "descripcion": "Frita al mojo de ajo o a la diabla. Precio según peso.",
+        "precio": "150.00",
+        "imagen": "",
+        "categoria": 1,
+        "is_active": true,
+        "ingredientes": [
+            4
+        ]
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 7,
+    "fields": {
+        "nombre": "Caldo de Camarón",
+        "descripcion": "Tradicional caldo rojo con camarón fresco.",
+        "precio": "170.00",
+        "imagen": "",
+        "categoria": 2,
+        "is_active": true,
+        "ingredientes": [
+            1
+        ]
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 8,
+    "fields": {
+        "nombre": "Sopa de Mariscos",
+        "descripcion": "La mejor selección de frutos del mar en un caldo sazonado.",
+        "precio": "170.00",
+        "imagen": "",
+        "categoria": 2,
+        "is_active": true,
+        "ingredientes": [
+            1,
+            2
+        ]
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 9,
+    "fields": {
+        "nombre": "Coca Cola",
+        "descripcion": null,
+        "precio": "25.00",
+        "imagen": "",
+        "categoria": 3,
+        "is_active": true,
+        "ingredientes": []
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 10,
+    "fields": {
+        "nombre": "Cerveza Corona",
+        "descripcion": null,
+        "precio": "35.00",
+        "imagen": "",
+        "categoria": 3,
+        "is_active": true,
+        "ingredientes": []
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 11,
+    "fields": {
+        "nombre": "Clamato",
+        "descripcion": null,
+        "precio": "60.00",
+        "imagen": "",
+        "categoria": 3,
+        "is_active": true,
+        "ingredientes": []
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 12,
+    "fields": {
+        "nombre": "Jumex",
+        "descripcion": null,
+        "precio": "25.00",
+        "imagen": "",
+        "categoria": 3,
+        "is_active": true,
+        "ingredientes": []
+    }
+},
+{
+    "model": "menu.producto",
+    "pk": 13,
+    "fields": {
+        "nombre": "Agua Embotellada",
+        "descripcion": null,
+        "precio": "25.00",
+        "imagen": "",
+        "categoria": 3,
+        "is_active": true,
+        "ingredientes": []
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 1,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "0.00",
+        "subtotal": "0.00",
+        "iva": "0.00",
+        "total": "645.00",
+        "created_at": "2026-05-03T20:16:45.311Z",
+        "estado": "NUEVA"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 2,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "29.00",
+        "subtotal": "0.00",
+        "iva": "0.00",
+        "total": "0.00",
+        "created_at": "2026-05-03T20:19:27.945Z",
+        "estado": "TERMINADA"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 3,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "29.00",
+        "subtotal": "0.00",
+        "iva": "0.00",
+        "total": "0.00",
+        "created_at": "2026-05-03T20:19:52.563Z",
+        "estado": "PROCESO"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 4,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "29.00",
+        "subtotal": "0.00",
+        "iva": "0.00",
+        "total": "0.00",
+        "created_at": "2026-05-03T20:20:14.715Z",
+        "estado": "PROCESO"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 5,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "29.00",
+        "subtotal": "0.00",
+        "iva": "0.00",
+        "total": "0.00",
+        "created_at": "2026-05-03T20:22:17.409Z",
+        "estado": "PROCESO"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 6,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "0.00",
+        "subtotal": "0.00",
+        "iva": "0.00",
+        "total": "355.00",
+        "created_at": "2026-05-03T20:22:56.093Z",
+        "estado": "TERMINADA"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 7,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "0.00",
+        "subtotal": "0.00",
+        "iva": "0.00",
+        "total": "355.00",
+        "created_at": "2026-05-03T20:23:55.210Z",
+        "estado": "TERMINADA"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 8,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "29.00",
+        "subtotal": "0.00",
+        "iva": "0.00",
+        "total": "355.00",
+        "created_at": "2026-05-03T20:25:43.146Z",
+        "estado": "TERMINADA"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 9,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "35.00",
+        "subtotal": "1290.00",
+        "iva": "206.40",
+        "total": "1531.40",
+        "created_at": "2026-05-03T20:34:23.512Z",
+        "estado": "NUEVA"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 10,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "EFECTIVO",
+        "propina": "35.00",
+        "subtotal": "1290.00",
+        "iva": "206.40",
+        "total": "1531.40",
+        "created_at": "2026-05-03T20:54:51.208Z",
+        "estado": "NUEVA"
+    }
+},
+{
+    "model": "menu.orden",
+    "pk": 11,
+    "fields": {
+        "mesa": null,
+        "es_para_llevar": true,
+        "metodo_pago": "TARJETA",
+        "propina": "59.00",
+        "subtotal": "610.00",
+        "iva": "97.60",
+        "total": "766.60",
+        "created_at": "2026-05-03T20:55:22.742Z",
+        "estado": "NUEVA"
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 1,
+    "fields": {
+        "orden": 1,
+        "producto": 3,
+        "cantidad": 1,
+        "precio_unitario": "145.00",
+        "notas": "Termino medio",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 2,
+    "fields": {
+        "orden": 1,
+        "producto": 2,
+        "cantidad": 2,
+        "precio_unitario": "250.00",
+        "notas": "Sin Ajo",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 3,
+    "fields": {
+        "orden": 6,
+        "producto": 1,
+        "cantidad": 3,
+        "precio_unitario": "70.00",
+        "notas": "Sin sal",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 4,
+    "fields": {
+        "orden": 6,
+        "producto": 3,
+        "cantidad": 1,
+        "precio_unitario": "145.00",
+        "notas": "Sin Tomate",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 5,
+    "fields": {
+        "orden": 7,
+        "producto": 1,
+        "cantidad": 3,
+        "precio_unitario": "70.00",
+        "notas": "Sin sal",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 6,
+    "fields": {
+        "orden": 7,
+        "producto": 3,
+        "cantidad": 1,
+        "precio_unitario": "145.00",
+        "notas": "Sin Tomate",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 7,
+    "fields": {
+        "orden": 8,
+        "producto": 1,
+        "cantidad": 3,
+        "precio_unitario": "70.00",
+        "notas": "Sin sal",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 8,
+    "fields": {
+        "orden": 8,
+        "producto": 3,
+        "cantidad": 1,
+        "precio_unitario": "145.00",
+        "notas": "Sin Tomate",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 9,
+    "fields": {
+        "orden": 9,
+        "producto": 2,
+        "cantidad": 4,
+        "precio_unitario": "250.00",
+        "notas": "Sin sal",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 10,
+    "fields": {
+        "orden": 9,
+        "producto": 5,
+        "cantidad": 2,
+        "precio_unitario": "145.00",
+        "notas": "Sin Tomate",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 11,
+    "fields": {
+        "orden": 10,
+        "producto": 2,
+        "cantidad": 4,
+        "precio_unitario": "250.00",
+        "notas": "Sin sal",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 12,
+    "fields": {
+        "orden": 10,
+        "producto": 5,
+        "cantidad": 2,
+        "precio_unitario": "145.00",
+        "notas": "Sin Tomate",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 13,
+    "fields": {
+        "orden": 11,
+        "producto": 1,
+        "cantidad": 1,
+        "precio_unitario": "70.00",
+        "notas": "",
+        "preparado": false
+    }
+},
+{
+    "model": "menu.detalleorden",
+    "pk": 14,
+    "fields": {
+        "orden": 11,
+        "producto": 4,
+        "cantidad": 3,
+        "precio_unitario": "180.00",
+        "notas": "",
+        "preparado": false
+    }
+},
+{
+    "model": "authtoken.token",
+    "pk": "0fd6aa3060bfddba4c96dd90e89543854d2761d7",
+    "fields": {
+        "user": [
+            "aaron"
+        ],
+        "created": "2026-05-03T20:09:36.400Z"
+    }
+}
+]
